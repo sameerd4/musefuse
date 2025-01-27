@@ -1,22 +1,19 @@
-cat > .gitignore << EOL
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
 venv/
 .env
-
-# Database
 *.db
 
 # Angular
 node_modules/
 dist/
 .angular/
+.vscode/
 
 # iOS
 *.xcuserstate
 *.xcworkspace/
 xcuserdata/
 .DS_Store
-EOL
