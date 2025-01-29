@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2>My Photos</h2>
+  
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let photo of userPhotos">
+      <div class="card h-100">
+        <img [src]="photo.thumbnail_url" class="card-img-top" [alt]="photo.filename">
+        <div class="card-body">
+          <p class="card-text">{{photo.upload_time | date}}</p>
+          <button class="btn btn-danger" (click)="deletePhoto(photo.filename)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">MuseFuse</a>
+    <div class="navbar-nav me-auto">
+      <ng-container *ngIf="isLoggedIn">
+        <a class="nav-link" routerLink="/photos" routerLinkActive="active">Photos</a>
+        <a class="nav-link" routerLink="/upload" routerLinkActive="active">Upload</a>
+        <a class="nav-link" routerLink="/profile" routerLinkActive="active">My Photos</a>
+      </ng-container>
+    </div>
+    <div class="navbar-nav">
+      <ng-container *ngIf="!isLoggedIn">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+      </ng-container>
+      <a class="nav-link" *ngIf="isLoggedIn" href="#" (click)="logout($event)">Logout</a>
+    </div>
+  </div>
+</nav> 
